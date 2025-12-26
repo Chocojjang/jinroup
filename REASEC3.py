@@ -223,6 +223,17 @@ def show_result_page():
         cols = st.columns(4)
         for i, job in enumerate(jobs):
             cols[i % 4].info(job)
+    st.write("") # 버튼 위에 약간의 여백 추가
+
+    st.link_button(
+
+        label="직업 정보 및 더 많은 직업 살펴보기 🖱️",
+
+        url="https://www.career.go.kr/cloud/w/job/list", # 직업 정보 링크
+
+        use_container_width=True
+
+    )
 
     st.markdown("### 🎓 추천 학과")
     for riasec_type in top_types:
@@ -231,7 +242,17 @@ def show_result_page():
         cols = st.columns(4)
         for i, major in enumerate(majors):
             cols[i % 4].success(major)
-    
+    st.write("") # 버튼 위에 약간의 여백 추가
+
+    st.link_button(
+
+        label="학과 정보 및 더 많은 학과 살펴보기 🖱️",
+
+        url="https://www.career.go.kr/cloud/w/major/uList", # 학과 정보 링크
+
+        use_container_width=True
+
+    )
     st.markdown("---")
     if st.button("🔄 검사 다시하기", use_container_width=True):
         st.session_state.riasec_page = 'intro'
@@ -254,4 +275,5 @@ def main():
         show_result_page()
 
 main()
+
 
