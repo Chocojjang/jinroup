@@ -253,5 +253,5 @@ def main():
     elif st.session_state.riasec_page == 'result':
         show_result_page()
 
-if __name__ == "__main__":
-    main()
+main()
+
